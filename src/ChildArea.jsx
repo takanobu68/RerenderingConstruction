@@ -1,9 +1,12 @@
-export const ChildArea = (props) => {
-  const style = {
-    width: "100%",
-    height: "200px",
-    backgroundColor: "khaki"
-  };
+import { memo } from "react";
+
+const style = {
+  width: "100%",
+  height: "200px",
+  backgroundColor: "khaki"
+};
+
+export const ChildArea = memo((props) => {
   const { open } = props;
   return (
     <>
@@ -14,4 +17,4 @@ export const ChildArea = (props) => {
       ) : null}
     </>
   );
-};
+});
